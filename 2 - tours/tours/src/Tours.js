@@ -1,7 +1,7 @@
 import React from 'react';
 import Tour from './Tour';
 
-function Tours({ tours }) {
+function Tours({ tours, removeTours }) {
   return (
     <div className="container">
       <div className='heading'>Tours</div>
@@ -10,7 +10,7 @@ function Tours({ tours }) {
         {
           tours.map((tour) => {
             return(
-              <Tour key={tour.id} {...tour} />
+              <Tour key={tour.id} {...tour} removeTours={removeTours} />
             );
           })
         }

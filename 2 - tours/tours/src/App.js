@@ -8,6 +8,7 @@ const url = 'https://course-api.com/react-tours-project';
 function App() {
   const [ tours, setTours ] = useState([]);
   const [ isLoading, setLoading ] = useState(true);
+  const [ remove, setRemove ] = useState(0);
 
   async function fetchTours() {
     setLoading(false);
@@ -21,6 +22,14 @@ function App() {
       setLoading(true);
       console.log('Error fetching tour data.');
     }
+  };
+
+  function removeTours(id) {
+    let newTours = tours.filter((tour) => {
+      if (id == tour.id) return false;
+      else return true;
+    });
+    setTours(newTours);
   }
    
   useEffect(() => {
@@ -29,7 +38,7 @@ function App() {
 
   if (!isLoading) {
     return(
-      <Tours tours={tours} />
+      <Tours tours={tours} removeTours={removeTours} />
     );
   }
   else {
