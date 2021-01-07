@@ -6,13 +6,15 @@ function Tours({ tours }) {
     <div className="container">
       <div className='heading'>Tours</div>
       <div className='underline'></div>
-      {
-        tours.map((tour) => {
-          return(
-            <Tour key={tour.id} {...tour} />
-          );
-        })
-      }
+      <div className="tourContainer">
+        {
+          tours.map((tour) => {
+            return(
+              <Tour key={tour.id} {...tour} />
+            );
+          })
+        }
+      </div>
     </div>
   );
 };
