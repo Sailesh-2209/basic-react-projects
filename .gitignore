@@ -3,4 +3,6 @@ ref
 ./1 - birthday reminder/birthday/node_modules
 ./1 - birthday reminder/birthday/src/yarn.lock
 ./2 - tours/tours/node_modules
-./2 - tours/tours/src/yarn.lock
+./2 - tours/tours/yarn.lock
+./3 - menu/menu/src/node_modules
+./3 - menu/menu/yarn.lock
