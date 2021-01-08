@@ -4,5 +4,5 @@ ref
 ./1-birthday reminder/birthday/src/yarn.lock
 ./2-tours/tours/node_modules
 ./2-tours/tours/yarn.lock
-./3-reviews/reviews/src/node_modules
+./3-reviews/reviews/node_modules
 ./3-reviews/reviews/yarn.lock

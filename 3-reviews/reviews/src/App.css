@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@700&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #fddcfd;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.heading {
+    font-family: 'Overpass', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.underline {
+    width: 150px;
+    height: 6px;
+    margin: auto;
+    background-color: black;
+    margin-bottom: 70px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 700px;
+    height: 400px;
+    background-color: white;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.photo {
+    width: 100%;
+    height: 50%;
 }
-
-.App-link {
-  color: #61dafb;
+img {
+    border-radius: 50%;
+    height: 175px;
+    width: 175px;
+    position: relative;
+    top: 15px;
+    left: 275px;
+    box-shadow: blueviolet;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.review {
+    width: 100%;
+    height: 30%;
+}
+p {
+    margin: 30px;
+}
+.buttons {
+    width: 100%;
+    height: 20%;
 }
