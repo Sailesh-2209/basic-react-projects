@@ -50,7 +50,7 @@ function Reviews() {
                 </div>
                 <div className="buttons">
                     <span className="left-right-btn">
-                        <button onClick={setNext} className="left-btn">l</button>
+                        <button onClick={() => setNext()} className="left-btn">l</button>
                         <button onClick={setPrevious} className="right-btn">r</button>
                     </span>
                     <button onClick={setRandom} className="random">Surprise Me</button>

@@ -6,3 +6,5 @@ ref
 ./2-tours/tours/yarn.lock
 ./3-reviews/reviews/node_modules
 ./3-reviews/reviews/yarn.lock
+./4-accordian/accordian/node_modules
+./4-accordian/accordian/yarn.lock
