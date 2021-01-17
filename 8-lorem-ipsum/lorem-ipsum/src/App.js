@@ -1,25 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import { ReactSVG } from 'react-svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Text from './Text';
 import Selection from './Selection';
 import Loading from './Loading';
 
-const url = 'https://hipsum.co/api/?type=hipster-centric&sentences=';
+const url = 'https://hipsum.co/api/?type=hipster-centric&sentences=1000';
 
 function App() {
 
-  const [ senetences, setSentences ] = useState(0);
   const [ paragraphs, setParagraphs ] = useState(0);
-  const [ loading, setLoading ] = useState(true);
+  const [ info, setInfo ] = useState('');
+  const [ display, setDisplay ] = useState(false);
+
+  const fetchData = async () => {
+    const response = await fetch(url);
+    const data = await response.json();
+    setInfo(data);
+  }
+
+  useEffect(() => fetchData(), []);
 
   return (
     <>
-      <h2>Hipster Ipsum - Dummy Text Generator</h2>
+      <h2 className='heading'>Hipster Ipsum - Dummy Text Generator</h2>
       <div className="underline"></div>
-      <Selection />
-      {loading && <Loading />}
-      {!loading && <Text />}
+      <Selection 
+        paragraphs={paragraphs} 
+        setParagraphs={setParagraphs}
+        setDisplay={setDisplay}
+      />
+      { display ? <Text info={info} paragraphs={paragraphs} /> : <Loading /> }
     </>
   );
 }

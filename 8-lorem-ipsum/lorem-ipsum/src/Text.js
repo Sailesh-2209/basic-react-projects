@@ -1,10 +1,22 @@
 import React from 'react';
 
-function Text() {
+function Text({ info, paragraphs }) {
+
+    const infoArray = info[0].split('.');
+    const newArr = [];
+    for (let i = 0; i < paragraphs; i++) {
+        newArr.push(infoArray.slice(i * paragraphs, i * paragraphs + 10).join('. '));
+    }
+
     return(
         <div className="container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eum obcaecati, cumque fugit nam voluptatibus ipsa ad rem consequatur corporis.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eum obcaecati, cumque fugit nam voluptatibus ipsa ad rem consequatur corporis.</p>
+            {
+                newArr.map((item, index) => {
+                    return(
+                        <p className='para' key={index} >{item}</p>
+                    );
+                })
+            }
         </div>
     );
 }
