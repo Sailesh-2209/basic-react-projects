@@ -10,3 +10,5 @@ ref
 ./4-accordian/accordian/yarn.lock
 ./5-menu/menu/node_modules
 ./5-menu/menu/yarn.lock
+./6-tabs/tabs/node_modules
+./6-tabs/tabs/yarn.lock
