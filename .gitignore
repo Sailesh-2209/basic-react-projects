@@ -12,3 +12,5 @@ ref
 ./5-menu/menu/yarn.lock
 ./6-tabs/tabs/node_modules
 ./6-tabs/tabs/yarn.lock
+./7-reviews/reviews/node_modules
+./7-reviews/reviews/yarn.lock
