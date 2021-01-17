@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { ReactSVG } from 'react-svg';
 import './App.css';
+import Text from './Text';
+import Selection from './Selection';
+import Loading from './Loading';
+
+const url = 'https://hipsum.co/api/?type=hipster-centric&sentences=';
 
 function App() {
+
+  const [ senetences, setSentences ] = useState(0);
+  const [ paragraphs, setParagraphs ] = useState(0);
+  const [ loading, setLoading ] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h2>Hipster Ipsum - Dummy Text Generator</h2>
+      <div className="underline"></div>
+      <Selection />
+      {loading && <Loading />}
+      {!loading && <Text />}
+    </>
   );
 }
 
