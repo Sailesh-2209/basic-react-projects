@@ -14,3 +14,5 @@ ref
 ./6-tabs/tabs/yarn.lock
 ./7-reviews/reviews/node_modules
 ./7-reviews/reviews/yarn.lock
+./8-lorem-ipsum/lorem-ipsum/node_modules
+./8-lorem-ipsum/lorem-ipsum/yarn.lock
